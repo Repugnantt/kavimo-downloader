@@ -5,7 +5,7 @@ import requests
 from Cryptodome.Cipher import AES
 from Cryptodome.Protocol.KDF import PBKDF2
 from Cryptodome.Hash import SHA256
-import ffmpeg
+import subprocess
 import os
 from tqdm import tqdm
 
@@ -155,13 +155,7 @@ Progress.close()
 
 # CONVERT VIDEO STREAM TO MP4 VIA FFMPEG
 print(f"\nTOTAL SIZE [{BUFFER // 1048576}] MBs")
-stream = ffmpeg.input("vid")
-stream = ffmpeg.output(stream, "Video.mp4")
-try:
-    os.remove("Video.mp4")
-except FileNotFoundError:
-    pass
-ffmpeg.run(stream)
+subprocess.run(["ffmpeg", "-i", "vid", "-codec", "copy", "Video.mp4", "-y"])
 os.remove("vid")
 os.remove("embed.js")
 os.remove("first_.txt")
