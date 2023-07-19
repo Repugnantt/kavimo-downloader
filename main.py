@@ -9,7 +9,9 @@ import subprocess
 import os
 from tqdm import tqdm
 
-# ID = "i3zqz9fhf69f"
+HOST = input("ENTER WEBSITE HOST:\nexmaple: biomaze.ir\n")
+# HOST = "ramzali.com"
+# ID = "mdngbrlqqaoi"
 ID = input("ENTER VIDEO ID:\n")
 
 def write_to_file(string, file):
@@ -35,7 +37,7 @@ session.headers = {
     "accept-language": "en-US,en;q=0.9,fa;q=0.8,id;q=0.7,ps;q=0.6",
     "cache-control": "max-age=0",
     "cookie": "_ga=GA1.2.555325770.1667012237; _gid=GA1.2.969743052.1667193488",
-    "referer": f"https://stream.biomaze.ir/{ID}/iframe",
+    "referer": f"https://stream.{HOST}/{ID}/iframe",
     "sec-ch-ua": '"Chromium";v="106", "Google Chrome";v="106", "Not;A=Brand";v="99"',
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": '"Windows"',
@@ -50,14 +52,14 @@ session.headers = {
 regex = re.compile(r"\|" + ID + r"\|(.*?)\|")
 
 # GET IFRAME
-res = session.get(f"https://stream.biomaze.ir/{ID}/iframe")
+res = session.get(f"https://stream.{HOST}/{ID}/iframe")
 if res.status_code == 200:
     print("[INFO] SUCCESSFUL LOAD ON IFRAME")
 else: 
     raise Exception("UNABLE TO FETCH IFRAME")
 
 # GET EMBED
-res = session.get(f"https://stream.biomaze.ir/{ID}/embed")
+res = session.get(f"https://stream.{HOST}/{ID}/embed")
 if res.status_code == 200:
     print("[INFO] SUCCESSFUL LOAD ON EMBED FILE")
 else: 
@@ -74,7 +76,7 @@ magic_id = quoteds[-1]
 write_to_file(magic_id, "magic_id.txt")
 
 # GET M3U8
-res = session.get(f"https://stream.biomaze.ir/{data_json['playlist']}.m3u8")
+res = session.get(f"https://stream.{HOST}/{data_json['playlist']}.m3u8")
 cipher = res.text
 if res.status_code == 200:
     print("[INFO] SUCCESSFUL LOAD ON PLAYLIST M3U8")
