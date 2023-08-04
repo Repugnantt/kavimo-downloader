@@ -4,6 +4,9 @@
 YOU HAVE TO HAVE FFMPEG INSTALLED AND ADDED TO PATH
 ALSO KEEP IN MIND TO INSTALL REQUIREMENTS
 
+## FFMPEG INSTALLATION TUTORIAL
+https://www.youtube.com/watch?v=IECI72XEox0
+
 ## NEWEST UPDATES:
 After finding out about ramzali.com I could be sure about how platform works and made it so you can download videos from any website based on VIS ^2.0 and Kavimo
 
