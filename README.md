@@ -12,7 +12,7 @@ After finding out about ramzali.com I could be sure about how platform works and
 
 usage is fairly simple... -> every video is inside an iframe which can be incpected with devtools 
 
-links examples are as following https://stream.biomaze.ir/i3zqz9fhf69f/iframe
+link examples are as following https://stream.biomaze.ir/i3zqz9fhf69f/iframe
 
 in the link mentionded "HOST" is ( biomaze.ir ) and "ID" is ( i3zqz9fhf69f )
 
