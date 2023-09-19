@@ -5,4 +5,12 @@ pyvenv.cfg
 Include
 main.spec
 build
-
+embed.js
+first_.txt
+first_decoded.txt
+index.json
+magic_id.txt
+second_.txt
+second_decoded.txt
+vid
+Video.mp4

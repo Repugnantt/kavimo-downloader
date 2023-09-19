@@ -16,15 +16,21 @@ links examples are as following https://stream.biomaze.ir/i3zqz9fhf69f/iframe
 
 in the link mentionded "HOST" is ( biomaze.ir ) and "ID" is ( i3zqz9fhf69f )
 
-SIMPLE USAGE ON WINDOWS:
+SIMPLE USAGE:
 
-    First time only (installation):
+First time only (installation):
+
     git clone https://github.com/FarzadAT/kavimo-downloader.git
     cd kavimo-downloader
     pip install -r requirements.txt
 
-    using app:
+using the application:
+
     py main.py
+
+# **or on windows download and run the exe from:**
+
+https://github.com/FarzadAT/kavimo-downloader/releases/download/release/kavimo-downloader.exe
 
 **KEEP IN MIND THAT NO AUTHENTICATION TOKENS ARE REQUIRED AND YOUR PHONENUMBER IS REMOVED AUTOMATICALLY**
 
